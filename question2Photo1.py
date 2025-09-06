@@ -1,3 +1,4 @@
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import differential_evolution
@@ -16,7 +17,7 @@ missile_init = np.array([20000, 0, 2000])
 target_fake = np.array([0, 0, 0])
 target_points = generate_target_points_A()
 t_missile_arrive = np.linalg.norm(missile_init - target_fake) / 300.0
-r_smoke = 40.0
+r_smoke = 10.0
 
 print(f"导弹到达时间: {t_missile_arrive:.2f}s")
 print(f"烟幕半径: {r_smoke}m")
@@ -95,7 +96,7 @@ def fitness_core(theta, v, t_drop, t_delay):
     t_delay = max(0.0, t_delay)
     t_det = t_drop + t_delay
 
-    shield_duration = 35.0
+    shield_duration = 20.0
     if t_det + shield_duration > t_missile_arrive:
         return PENALTY, 0.0
 
