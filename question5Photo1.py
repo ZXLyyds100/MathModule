@@ -326,7 +326,7 @@ ax4.text(0.05, 0.95, summary_text,
          bbox=dict(boxstyle='round,pad=0.5', facecolor='lightblue', alpha=0.8))
 
 plt.tight_layout()
-plt.savefig('小问4_速度敏感性分析_修正版.png', dpi=300, bbox_inches='tight')
+plt.savefig('小问4_速度敏感性分析.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 print("\n=== 速度敏感性分析完成 ===")
